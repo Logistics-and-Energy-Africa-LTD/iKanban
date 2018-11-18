@@ -1,0 +1,14 @@
+{
+  "name": "ikanban",
+  "version": "1.0.0",
+  "description": "Ikanban Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daggie Blanqx",
+  "license": "ISC",
+  "devDependencies": {
+    "workbox-build": "^3.6.3"
+  }
+}
