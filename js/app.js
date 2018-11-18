@@ -6,9 +6,24 @@ const app = {
 };
 
 
+
+//This is the service worker with the Cache-first network
+
+//Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+if (navigator.serviceWorker.controller) {
+  console.log('[PWA Builder] active service worker found, no need to register')
+} else {
+
+//Register the ServiceWorker
+  navigator.serviceWorker.register('../pwa-sw.js', {
+    scope: './'
+  }).then(function(reg) {
+    console.log('Service worker has been registered for scope:'+ reg.scope);
+  });
+}
 /*
 START : service worker
-*/
+
 
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {
@@ -44,12 +59,12 @@ function showAddToHomeScreen() {
   Materialize.toast(`Install ${app.name}`, 4000)
 
 }
+*/
 
-
-const deleteOldCache = () => {
+const deleteOldCache = (newCache) => {
   // Assuming `CACHE_NAME` is the newest name
   // Time to clean up the old!
-  var CACHE_NAME = 'version-8';
+  var CACHE_NAME = newCache || 'version-8';
 
   //caches.keys() returns an array of all existing caches
 
@@ -61,10 +76,12 @@ const deleteOldCache = () => {
         }
       })
     );
-
-    window.location.reload()
-  });
+  })
+  .then(()=>{
+     window.location.reload();
+  })
 }
+
 
 const deleteCookie = () => {
 
