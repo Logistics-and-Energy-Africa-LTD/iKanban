@@ -41,21 +41,33 @@ var build = {
 	'../img/ms-icon-310x310.png',
 	'../img/ms-icon-70x70.png',
 	'../img/laptop_bg.jpg',
+	'../img/1.gif',
+	'../img/2.gif',
+	'../img/3.gif',
 	],
 
 }
 
 const initCopy = ()=>{
-	build.files.map((file)=>{
-		fs.copy(file, `../build/temp/${file}`)
-		.then(() => console.log(`added : ${file}`))
-		.catch(err => console.error(err));
-	});
+	return new Promise((resolve,reject)=>{
+		build.files.map((file)=>{
+			fs.copy(file, `../build/temp/${file}`)
+			.then(() => console.log(`added : ${file}`))
+			.catch(err => console.error(err));
+		});
+		resolve();
+	})
 };
 
 //copy files in app files into the build folder
-initCopy();
+initCopy()
+.then(()=>{
+	console.log(`
+		Files built successfully on the ${new Date()}
 
+		Check the "build/" folder
+		`)
+})
 /*
 TO DO :
 
