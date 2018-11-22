@@ -274,8 +274,9 @@ return new Promise(function(resolve, reject){
   */
 }
 
+let mode = getUrlParameter('mode');
 
-if (getUrlParameter('mode') == 'dev') {
+if (mode == 'dev'){
    include('https://cdn.logrocket.io/LogRocket.min.js')
    .then(()=>{
       console.log('loaded LogRocket')
