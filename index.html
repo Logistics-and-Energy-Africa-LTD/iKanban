@@ -276,6 +276,7 @@ return new Promise(function(resolve, reject){
 if (getUrlParameter('mode' == 'dev')) {
    include('https://cdn.logrocket.io/LogRocket.min.js')
    .then(()=>{
+      console.log('loaded LogRocket')
       window.LogRocket && window.LogRocket.init('11ugiw/ikanban');
    })
 }
