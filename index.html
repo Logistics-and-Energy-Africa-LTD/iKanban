@@ -235,6 +235,8 @@
       <script type="text/javascript">
          
 
+
+
 const getUrlParameter = (name)=>{
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -273,7 +275,7 @@ return new Promise(function(resolve, reject){
 }
 
 
-if (getUrlParameter('mode' == 'dev')) {
+if (getUrlParameter('mode') == 'dev') {
    include('https://cdn.logrocket.io/LogRocket.min.js')
    .then(()=>{
       console.log('loaded LogRocket')
