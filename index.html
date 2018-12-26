@@ -32,7 +32,7 @@
       <meta name="description" content="A systematic approach to project management" />
       <meta property="og:title" content="iKanban Online for project management" />
       <meta property="og:description" content="A systematic approach to project management" />
-      <meta property="og:image" content="./img/300x200.png" /> 
+      <meta property="og:image" content="./img/300x200.png" />
    </head>
    <body>
       <nav role="navigation" class="black">
@@ -56,7 +56,7 @@
                <h1><b class="iKanbanTyped">iKanban</b></h1>
                <h3>A systematic approach to project management ...</h3>
                <br>
-               <h5 class="black-text explanation" style="padding-top: 1vh;"></h5>
+               <h5 class="black-text explanation" style="padding: 1vh;height: 3vh;"></h5>
                <br>
                <h5 style="padding-top: 5vh;">
                   <a href="//app.ikanbanonline.com" class="btn waves-effect waves-light blue">GET STARTED NOW</a>
@@ -74,14 +74,14 @@
                <div class="col s12 m4">
                   <div class="icon-block">
                      <h2 class="center blue-text"><i class="material-icons">flash_on</i></h2>
-                     <h5 class="center">Speeds up development</h5>
+                     <h5 class="center">Lean Project Management</h5>
                      <p class="light">Because speed matters , iKanban has every element intuitively positioned to ensure a user makes swift updates </p>
                   </div>
                </div>
                <div class="col s12 m4">
                   <div class="icon-block">
                      <h2 class="center blue-text"><i class="material-icons">group</i></h2>
-                     <h5 class="center">Collaboration</h5>
+                     <h5 class="center">Reduce waste</h5>
                      <p class="light">It has never been this easier to collaborate online . iKanban app helps your team work together .</p>
                   </div>
                </div>
@@ -89,7 +89,7 @@
                   <div class="icon-block">
                      <h2 class="center blue-text"><i class="material-icons">settings</i></h2>
                      <h5 class="center">
-                        <h5 data-highlightable="1" class="center gjs-comp-selected c5102">User Experience Focused</h5>
+                        <h5 data-highlightable="1" class="center gjs-comp-selected c5102">Simplified Project management</h5>
                      </h5>
                      <p class="light">By utilizing elements and principles of UX Design, we were able to create a tool that you can use with ease . </p>
                   </div>
@@ -112,6 +112,59 @@
          </div>
          <div class="parallax"><img src="./img/laptop_bg.jpg" alt="Unsplashed background img 2"/></div>
       </div>
+
+      <div class="container ">
+         <div class="section">
+            <div class="row">
+               <div class="col s12 l6 m6 ">
+                  
+                  <img src="./img/3.gif" class="z-depth-5 responsive-img">
+               </div>
+               <div class="col s12 l6 m6">
+                  <h4>Create Projects</h4>
+                  <ul>
+                     <li><b class="blue-text"><i class="material-icons">playlist_add</i>Create Projects</b> - iKanban allows you quickly create projects and add tasks in it .</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="container ">
+         <div class="section">
+            <div class="row">
+               <div class="col s12 l6 m6">
+                  <h4>Manage Expenses</h4>
+                  <ul>
+                     <li><b class="blue-text"><i class="material-icons">money</i>Expense</b> - iKanban allows you manage project expenses with utmost ease.You can also preview graphical data through charts and graphs</li>
+                     <br>
+                  </ul>
+               </div>
+               <div class="col s12 l6 m6 ">
+                  
+                  <img src="./img/2.gif" class="z-depth-5 responsive-img">
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="container ">
+         <div class="section">
+            <div class="row">
+               <div class="col s12 l6 m6 ">
+                  <img src="./img/1.gif" class="z-depth-5 responsive-img">
+               </div>
+               <div class="col s12 l6 m6">
+                  <h4>Clock In</h4>
+                  <ul>
+                     <li><b class="blue-text"><i class="material-icons">access_alarm</i>Time is money</b> - iKanban allows you to clock in to tasks using a very simple intuitive interface .</li>
+                     <br>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
       <div class="container">
          <div class="section">
             <div class="row">
@@ -141,13 +194,16 @@
                      <li><b class="blue-text"><i class="material-icons">hearing</i>Inituitive</b> - You don`t need to be a Kanban expert to use iKanban .</li>
                      <br>
                      <li><b class="blue-text"><i class="material-icons">
-money_off
-</i>Free</b> - iKanban is free , so what are you waiting for ?</li>
+                        money_off
+                        </i>Free</b> - iKanban is free , so what are you waiting for ?
+                     </li>
                   </ul>
                </div>
             </div>
          </div>
       </div>
+
+
       <footer>
          <div class="container-wide black">
             <div class="row">
@@ -166,7 +222,7 @@ money_off
          breakLines: false,
          loop:true,
          });
-
+         
          new TypeIt('.iKanbanTyped', {
          strings: ["iKa nban"],
          autoStart: true,
@@ -175,7 +231,73 @@ money_off
          cursorChar:''
          });
       </script>
-      <script type="text/javascript" src="js/app.js"></script>
+
+      <script type="text/javascript">
+         
+
+
+
+const getUrlParameter = (name)=>{
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+
+
+const include = (file)=>{
+return new Promise(function(resolve, reject){
+        var script = document.createElement('script');
+        script.src = file;
+        script.type ='text/javascript';
+        script.defer = true;
+        script.crossorigin='anonymous';
+        document.getElementsByTagName('head').item(0).appendChild(script);
+
+        script.onload = function(){
+        resolve()
+        }
+        script.onerror = function(){
+          reject()
+        }
+      })
+
+ /*I HAVE MODIFIED THIS TO  BE PROMISE-BASED 
+   HOW TO USE THIS FUNCTION 
+
+  include('js/somefile.js').then(function(){
+  console.log('loaded');
+  },function(){
+  console.log('not loaded');
+  })
+  */
+}
+
+const mode = getUrlParameter('mode');
+const devUserName = getUrlParameter('devUser') || 'unidentified';
+const devEmail = getUrlParameter('devEmail') || 'unidentified';
+const currentTime = new Date();
+
+
+
+if (mode == 'dev'){
+   include('https://cdn.logrocket.io/LogRocket.min.js')
+   .then(()=>{
+      console.log('loaded LogRocket');
+      window.LogRocket && window.LogRocket.init('11ugiw/ikanban');
+      LogRocket.identify('Developer Tester', {
+         name: devUserName,
+         email: devEmail,
+         time: currentTime
+      });
+   })
+}
+      </script>
+<!--      <script type="text/javascript" src="js/app.js"></script> 
+
+      <script src="" crossorigin="anonymous"></script>
+<script></script>-->
       <!--  this page is generated by BlanqxUIlder (extended and developed by https://create.blanqx.com)  -->
    </body>
 </html>

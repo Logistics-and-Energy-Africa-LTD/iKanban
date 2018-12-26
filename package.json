@@ -4,11 +4,15 @@
   "description": "Ikanban Landing Page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upgit": "git add * && git commit -m \" Updated some files , fixed some bugs\" && git push ",
+    "dev": "cls && browser-sync --files=\"**/*\" ",
+    "build": "cd tools && node builder.js"
   },
   "author": "Daggie Blanqx",
   "license": "ISC",
   "devDependencies": {
+    "fs-extra": "^7.0.1",
     "workbox-build": "^3.6.3"
   }
 }
